@@ -1,0 +1,39 @@
+@import '../../apps/mixin.less';
+
+.gaosi-comp-itemselect {
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  li {
+    float: left;
+    cursor: pointer;
+    margin-right: 8px;
+
+    &.active {
+      color: @main-color;
+      font-weight: bold;
+    }
+  }
+}
+
+.gaosi-comp-itemselect-block {
+  background: #f8f8f8;
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  li {
+    float: left;
+    padding: 8px 12px;
+    cursor: pointer;
+    margin-right: 0;
+
+    &.active {
+      background: @main-color;
+      color: #fff;
+    }
+  }
+}

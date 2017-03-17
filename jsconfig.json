@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "experimentalDecorators": true
+  },
+  "exclude": [
+    "gsbuild",
+    "node_modules",
+    "ant-design",
+    "react-antd-admin"
+  ],
+  "jsx": "react"
+}

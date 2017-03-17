@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+  <title></title>
+
+  <link href="/assets/libs/ueditor/themes/default/_css/umeditor.css" type="text/css" rel="stylesheet">
+
+  <script type="text/javascript" src="/assets/libs/ueditor/third-party/jquery.min.js"></script>
+  <script type="text/javascript" src="/assets/libs/ueditor/umeditor.min.js" charset="utf-8"></script>
+  <script type="text/javascript" src="/assets/libs/ueditor/umeditor.config.js" charset="utf-8"></script>
+  <script type="text/javascript" src="/assets/libs/ueditor/lang/zh-cn/zh-cn.js"></script>
+
+  <script>
+    window.c = function(a){console.log(a)}
+    window._c = function(a){
+      alert(JSON.stringify(a).replace(/\,/g, ",\n"))
+    }
+    window._C = function(a){_c(a);}
+    window.countrydata = [{key:"CN",value:"中国"},{key:"AO",value:"安哥拉"},{key:"AF",value:"阿富汗"},{key:"AL",value:"阿尔巴尼亚"},{key:"DZ",value:"阿尔及利亚"},{key:"AD",value:"安道尔共和国"},{key:"AI",value:"安圭拉岛"},{key:"AG",value:"安提瓜和巴布达"},{key:"AR",value:"阿根廷"},{key:"AM",value:"亚美尼亚"},{key:"AU",value:"澳大利亚"},{key:"AT",value:"奥地利"},{key:"AZ",value:"阿塞拜疆"},{key:"BS",value:"巴哈马"},{key:"BH",value:"巴林"},{key:"BD",value:"孟加拉国"},{key:"BB",value:"巴巴多斯"},{key:"BY",value:"白俄罗斯"},{key:"BE",value:"比利时"},{key:"BZ",value:"伯利兹"},{key:"BJ",value:"贝宁"},{key:"BM",value:"百慕大群岛"},{key:"BO",value:"玻利维亚"},{key:"BW",value:"博茨瓦纳"},{key:"BR",value:"巴西"},{key:"BN",value:"文莱"},{key:"BG",value:"保加利亚"},{key:"BF",value:"布基纳法索"},{key:"MM",value:"缅甸"},{key:"BI",value:"布隆迪"},{key:"CM",value:"喀麦隆"},{key:"CA",value:"加拿大"},{key:"CF",value:"中非共和国"},{key:"TD",value:"乍得"},{key:"CL",value:"智利"},{key:"CO",value:"哥伦比亚"},{key:"CG",value:"刚果"},{key:"CK",value:"库克群岛"},{key:"CR",value:"哥斯达黎加"},{key:"CU",value:"古巴"},{key:"CY",value:"塞浦路斯"},{key:"CZ",value:"捷克"},{key:"DK",value:"丹麦"},{key:"DJ",value:"吉布提"},{key:"DO",value:"多米尼加共和国"},{key:"EC",value:"厄瓜多尔"},{key:"EG",value:"埃及"},{key:"SV",value:"萨尔瓦多"},{key:"EE",value:"爱沙尼亚"},{key:"ET",value:"埃塞俄比亚"},{key:"FJ",value:"斐济"},{key:"FI",value:"芬兰"},{key:"FR",value:"法国"},{key:"GF",value:"法属圭亚那"},{key:"GA",value:"加蓬"},{key:"GM",value:"冈比亚"},{key:"GE",value:"格鲁吉亚"},{key:"DE",value:"德国"},{key:"GH",value:"加纳"},{key:"GI",value:"直布罗陀"},{key:"GR",value:"希腊"},{key:"GD",value:"格林纳达"},{key:"GU",value:"关岛"},{key:"GT",value:"危地马拉"},{key:"GN",value:"几内亚"},{key:"GY",value:"圭亚那"},{key:"HT",value:"海地"},{key:"HN",value:"洪都拉斯"},{key:"HK",value:"香港"},{key:"HU",value:"匈牙利"},{key:"IS",value:"冰岛"},{key:"IN",value:"印度"},{key:"ID",value:"印度尼西亚"},{key:"IR",value:"伊朗"},{key:"IQ",value:"伊拉克"},{key:"IE",value:"爱尔兰"},{key:"IL",value:"以色列"},{key:"IT",value:"意大利"},{key:"JM",value:"牙买加"},{key:"JP",value:"日本"},{key:"JO",value:"约旦"},{key:"KH",value:"柬埔寨"},{key:"KZ",value:"哈萨克斯坦"},{key:"KE",value:"肯尼亚"},{key:"KR",value:"韩国"},{key:"KW",value:"科威特"},{key:"KG",value:"吉尔吉斯坦"},{key:"LA",value:"老挝"},{key:"LV",value:"拉脱维亚"},{key:"LB",value:"黎巴嫩"},{key:"LS",value:"莱索托"},{key:"LR",value:"利比里亚"},{key:"LY",value:"利比亚"},{key:"LI",value:"列支敦士登"},{key:"LT",value:"立陶宛"},{key:"LU",value:"卢森堡"},{key:"MO",value:"澳门"},{key:"MG",value:"马达加斯加"},{key:"MW",value:"马拉维"},{key:"MY",value:"马来西亚"},{key:"MV",value:"马尔代夫"},{key:"ML",value:"马里"},{key:"MT",value:"马耳他"},{key:"MU",value:"毛里求斯"},{key:"MX",value:"墨西哥"},{key:"MD",value:"摩尔多瓦"},{key:"MC",value:"摩纳哥"},{key:"MN",value:"蒙古"},{key:"MS",value:"蒙特塞拉特岛"},{key:"MA",value:"摩洛哥"},{key:"MZ",value:"莫桑比克"},{key:"NA",value:"纳米比亚"},{key:"NR",value:"瑙鲁"},{key:"NP",value:"尼泊尔"},{key:"NL",value:"荷兰"},{key:"NZ",value:"新西兰"},{key:"NI",value:"尼加拉瓜"},{key:"NE",value:"尼日尔"},{key:"NG",value:"尼日利亚"},{key:"KP",value:"朝鲜"},{key:"NO",value:"挪威"},{key:"OM",value:"阿曼"},{key:"PK",value:"巴基斯坦"},{key:"PA",value:"巴拿马"},{key:"PG",value:"巴布亚新几内亚"},{key:"PY",value:"巴拉圭"},{key:"PE",value:"秘鲁"},{key:"PH",value:"菲律宾"},{key:"PL",value:"波兰"},{key:"PF",value:"法属玻利尼西亚"},{key:"PT",value:"葡萄牙"},{key:"PR",value:"波多黎各"},{key:"QA",value:"卡塔尔"},{key:"RO",value:"罗马尼亚"},{key:"RU",value:"俄罗斯"},{key:"LC",value:"圣卢西亚"},{key:"VC",value:"圣文森特岛"},{key:"SM",value:"圣马力诺"},{key:"ST",value:"圣多美和普林西比"},{key:"SA",value:"沙特阿拉伯"},{key:"SN",value:"塞内加尔"},{key:"SC",value:"塞舌尔"},{key:"SL",value:"塞拉利昂"},{key:"SG",value:"新加坡"},{key:"SK",value:"斯洛伐克"},{key:"SI",value:"斯洛文尼亚"},{key:"SB",value:"所罗门群岛"},{key:"SO",value:"索马里"},{key:"ZA",value:"南非"},{key:"ES",value:"西班牙"},{key:"LK",value:"斯里兰卡"},{key:"SD",value:"苏丹"},{key:"SR",value:"苏里南"},{key:"SZ",value:"斯威士兰"},{key:"SE",value:"瑞典"},{key:"CH",value:"瑞士"},{key:"SY",value:"叙利亚"},{key:"TW",value:"台湾省"},{key:"TJ",value:"塔吉克斯坦"},{key:"TZ",value:"坦桑尼亚"},{key:"TH",value:"泰国"},{key:"TG",value:"多哥"},{key:"TO",value:"汤加"},{key:"TT",value:"特立尼达和多巴哥"},{key:"TN",value:"突尼斯"},{key:"TR",value:"土耳其"},{key:"TM",value:"土库曼斯坦"},{key:"UG",value:"乌干达"},{key:"UA",value:"乌克兰"},{key:"AE",value:"阿拉伯联合酋长国"},{key:"GB",value:"英国"},{key:"US",value:"美国"},{key:"UY",value:"乌拉圭"},{key:"UZ",value:"乌兹别克斯坦"},{key:"VE",value:"委内瑞拉"},{key:"VN",value:"越南"},{key:"YE",value:"也门"},{key:"YU",value:"南斯拉夫"},{key:"ZW",value:"津巴布韦"},{key:"ZR",value:"扎伊尔"},{key:"ZM",value:"赞比亚"}];
+  </script>
+</head>
+
+<body>
+  <div id="root" style="height:100%;"></div>
+</body>
+
+</html>
